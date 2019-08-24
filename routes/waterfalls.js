@@ -1,6 +1,7 @@
-const express = require("express");
+const express = require('express');
 const router = express.Router();
 const geolib = require('geolib');
+const { waterFalls } = require('../Data/nz-waterfall-points-topo-150k.js');
 
 router.get("/", async (req, res) => {
   const fakeReq = {
@@ -11,36 +12,6 @@ router.get("/", async (req, res) => {
       longitude: 174.775521
     }
   };
-
-  const waterfallList = [
-    {
-      name: "1",
-      height: 10.0,
-      liked: false,
-      location: {
-        latitude: -41.294907,
-        longitude: 174.775521
-      }
-    },
-    {
-      name: "3",
-      height: 10.0,
-      liked: true,
-      location: {
-        latitude: -41.294907,
-        longitude: 174.775521
-      }
-    },
-    {
-      name: "2",
-      height: 10.0,
-      liked: true,
-      location: {
-        latitude: -41.294907,
-        longitude: 174.775521
-      }
-    }
-  ];
 
   // logic 
   const withinRadiusList = []
@@ -82,42 +53,36 @@ axios.get(link)
     // always executed
   });
 
-  // console.log("Waterfalls within radius:");
-  // console.log(withinRadiusList);
-  // console.log("Liked waterfalls:");
-  // console.log(likedWaterfalls);
+router.get('/', (req, res) => {
+  const waterFallsProperties = waterFalls.map(wt => {
+    return {
+      Name: wt['properties']['Name'],
+      height: wt['properties']['height'],
+      coordinates: wt['geometry']['coordinates']
+    };
+  });
 
-});
+  res.send(waterFallsProperties);
 
-router.get('/caculate', async (req, res) => {
-  geolib.getDistance(
-    { latitude: 51.5103, longitude: 7.49347 },
-    { latitude: "51° 31' N", longitude: "7° 28' E" }
-  );
-  geolib.getDistance(
-    { latitude: 51.5103, longitude: 7.49347 },
-    { latitude: "51° 31' N", longitude: "7° 28' E" }
-  );
+  // // logic
+  // const outputWaterfallList = [];
 
-  navigator.geolocation.getCurrentPosition(
-    function(position) {
-      alert(
-        'You are ' +
-          geolib.getDistance(position.coords, {
-            latitude: 51.525,
-            longitude: 7.4575
-          }) +
-          ' meters away from 51.525, 7.4575'
-      );
-    },
-    function() {
-      alert('Position could not be determined.');
-    },
-    {
-      enableHighAccuracy: true
-    }
-  );
-  res.send('Hello world');
+  // for (let i = 0; i < waterfallList.length; i++) {
+  //   const water = waterfallList[i];
+  //   // Gets waterfall's distance
+  //   console.log("haven't got distance yet");
+  //   let waterfallDistance = geolib.getDistance(
+  //     fakeReq.userLocation,
+  //     water.location,
+  //     1
+  //   );
+  //   console.log(waterfallDistance);
+  //   if (waterfallDistance < fakeReq.radius) {
+  //     outputWaterfallList.push(water);
+  //   }
+  // }
+  // res.send(outputWaterfallList);
+  // res.send('ERROR');
 });
 
 module.exports = router;

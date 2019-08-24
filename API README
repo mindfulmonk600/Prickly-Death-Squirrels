@@ -1,0 +1,3 @@
+-Front-end will give the Back-end a name of a water fall
+-Back-end will use the water fall naem and the Google API to get the link of the first image
+-Back-end will give the link back to the Front-end
