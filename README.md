@@ -4,7 +4,7 @@ Shared repositiory for Create Camp project
 
 # To Run the Backend and Frontend concurrently
 
-- Install npm by writing 'npm install'
+- Install npm by writing `npm install`
 
 - Install `nodemon` package globally in your terminal like `npm install -g nodemon`.
 
