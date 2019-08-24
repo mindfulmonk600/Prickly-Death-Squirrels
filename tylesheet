@@ -1,0 +1,228 @@
+[33mcommit 1d740b46afec2091f990ce227f3c38a42d554874[m[33m ([m[1;36mHEAD -> [m[1;32mAndrea-Branch[m[33m)[m
+Author: Andrea <andreaclark7a@gmail.com>
+Date:   Sun Aug 25 09:20:38 2019 +1200
+
+    Added css file
+
+[33mcommit ced7baf21fb24891ea155e06461b4d1f27ef1176[m
+Merge: d83183a a01b9ec
+Author: Andrea <andreaclark7a@gmail.com>
+Date:   Sun Aug 25 08:58:38 2019 +1200
+
+    backend files
+
+[33mcommit d83183abb8a62a1b2a299bf6836a9bf49766d0b7[m
+Author: Andrea <andreaclark7a@gmail.com>
+Date:   Sun Aug 25 08:56:00 2019 +1200
+
+    minor changes to index
+
+[33mcommit a01b9ec515caf3fc23d011a30e14a5c32e018234[m[33m ([m[1;31morigin/master[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Merge: 721bebf aa59e28
+Author: Terence Zhong <t.zhong16@gmail.com>
+Date:   Sun Aug 25 08:53:21 2019 +1200
+
+    Merge pull request #8 from mathematicode/TerenceBranch
+    
+    Terence branch
+
+[33mcommit aa59e2857bc72f84d83edef6640b347a7b074bbc[m[33m ([m[1;31morigin/TerenceBranch[m[33m)[m
+Merge: 1412631 548092a
+Author: Terence Zhong <t.zhong16@gmail.com>
+Date:   Sun Aug 25 08:52:40 2019 +1200
+
+    setup frontend edevop enviornment
+
+[33mcommit 6b1a02edc33e6347d5d480243758507f9ddea2dd[m
+Author: Andrea <andreaclark7a@gmail.com>
+Date:   Sun Aug 25 08:51:06 2019 +1200
+
+    Test
+
+[33mcommit 548092a47ea7280c97a7c7f2315dbe976e935462[m
+Merge: e1e4883 721bebf
+Author: Terence Zhong <t.zhong16@gmail.com>
+Date:   Sat Aug 24 16:24:01 2019 +1200
+
+    Merge pull request #7 from mathematicode/master
+    
+    T
+
+[33mcommit 721bebf4bfd8924264000bc7e45037eab0dd6a04[m
+Merge: 208b01f e1e4883
+Author: Terence Zhong <t.zhong16@gmail.com>
+Date:   Sat Aug 24 16:23:25 2019 +1200
+
+    Merge pull request #6 from mathematicode/TerenceBranch
+    
+    Merge pull request #4 from mathematicode/Josh's-Branch
+
+[33mcommit 208b01ff7c34bee0e09d77a2baf22cdedd64a412[m
+Merge: ad5d159 56483ea
+Author: mathematicode <joshohagan17@gmail.com>
+Date:   Sat Aug 24 16:22:06 2019 +1200
+
+    Merge pull request #5 from mathematicode/Josh's-Branch
+    
+    Added Data file
+
+[33mcommit 56483eacbe17175f9d78127f64fd269aa3a6b1dd[m[33m ([m[1;31morigin/Josh's-Branch[m[33m)[m
+Merge: 6e152eb ad5d159
+Author: mathematicode <joshohagan17@gmail.com>
+Date:   Sat Aug 24 16:21:55 2019 +1200
+
+    Merge branch 'master' into Josh's-Branch
+
+[33mcommit 1412631008cab2fbf2d2ef2883bb06c6d1a5ee3a[m
+Merge: 8a223e6 e1e4883
+Author: Terence Zhong <t.zhong16@gmail.com>
+Date:   Sat Aug 24 16:16:20 2019 +1200
+
+    update
+
+[33mcommit 8a223e612c8b3ed203a70ce2cf4b0676920b2cd1[m
+Merge: b64600c ad5d159
+Author: Terence Zhong <t.zhong16@gmail.com>
+Date:   Sat Aug 24 16:14:45 2019 +1200
+
+    update
+
+[33mcommit 6e152eb0255888d3cba080b142b9724322a2be30[m
+Merge: 53e4db0 bf14614
+Author: Josh O'Hagan <joshohagan17@outlook.co.nz>
+Date:   Sat Aug 24 16:14:04 2019 +1200
+
+    Merge branch 'Josh's-Branch' of https://github.com/mathematicode/Prickly-Death-Squirrels into Josh's-Branch
+
+[33mcommit 53e4db06eb19d3c0620822798fe7c20148b5579a[m
+Author: Josh O'Hagan <joshohagan17@outlook.co.nz>
+Date:   Sat Aug 24 16:13:19 2019 +1200
+
+    Added data file
+
+[33mcommit e1e4883e5d02f73c00292da68b29b75e19d769dd[m
+Merge: b64600c bf14614
+Author: Terence Zhong <t.zhong16@gmail.com>
+Date:   Sat Aug 24 16:06:55 2019 +1200
+
+    Merge pull request #4 from mathematicode/Josh's-Branch
+    
+    Josh's branch
+
+[33mcommit bf146147b4c90a48f739263f2a2772fa95a8a08d[m
+Merge: 87bb33d b64600c
+Author: Terence Zhong <t.zhong16@gmail.com>
+Date:   Sat Aug 24 16:06:43 2019 +1200
+
+    Merge branch 'TerenceBranch' into Josh's-Branch
+
+[33mcommit b64600c37236231cbacbf8636dfd1fe8fa6328e9[m
+Author: Terence Zhong <t.zhong16@gmail.com>
+Date:   Sat Aug 24 16:04:05 2019 +1200
+
+    update readme
+
+[33mcommit 3485dcb900f0de6ce4884aa80a3b14a396f3589f[m[33m ([m[1;31morigin/frontend[m[33m, [m[1;32mfrontend[m[33m)[m
+Author: Lana Cleverley <cleverlana@ecs.vuw.ac.nz>
+Date:   Sat Aug 24 15:47:24 2019 +1200
+
+    added boostrap starter template
+
+[33mcommit 0598a098f77f4815534ddc2c2b38d2760f71ccb9[m
+Author: Lana Cleverley <cleverlana@ecs.vuw.ac.nz>
+Date:   Sat Aug 24 15:24:50 2019 +1200
+
+    added some basic functionality for getting user's current location. Code from https://www.w3schools.com/html/tryit.asp?filename=tryhtml5_geolocation_error
+
+[33mcommit 425dc37d8fc21a1d866b39c838b149f9ef2e501d[m
+Author: Lana Cleverley <cleverlana@ecs.vuw.ac.nz>
+Date:   Sat Aug 24 15:18:24 2019 +1200
+
+    added css page
+
+[33mcommit ad5d159e32d5a12dfd2de414d89fbf305286327d[m[33m ([m[1;32mmaster[m[33m)[m
+Merge: e070c01 35d147b
+Author: Lana Cleverley <lanacleverley@gmail.com>
+Date:   Sat Aug 24 15:09:51 2019 +1200
+
+    Merge pull request #3 from mathematicode/backend0
+    
+    Backend0 - added to gitignore and default index.html page
+
+[33mcommit e070c01b788d9ceb65cd368ca7a724fa3032bdd1[m
+Merge: eef72bb 87bb33d
+Author: mathematicode <joshohagan17@gmail.com>
+Date:   Sat Aug 24 15:06:20 2019 +1200
+
+    Merge pull request #2 from mathematicode/Josh's-Branch
+    
+    Josh's branch
+
+[33mcommit 87bb33d0b9821579f87008c0eccefda4f363db57[m
+Author: Josh O'Hagan <joshohagan17@outlook.co.nz>
+Date:   Sat Aug 24 15:05:06 2019 +1200
+
+    Pushing waterfall printing feature
+
+[33mcommit 35d147b939a82928db14db6dcffe7bd780e9ca6f[m[33m ([m[1;31morigin/backend0[m[33m)[m
+Author: Lana Cleverley <cleverlana@ecs.vuw.ac.nz>
+Date:   Sat Aug 24 15:01:18 2019 +1200
+
+    edited gitignore to ignore files specific to jetbrains and added a template index.hmtml page
+
+[33mcommit 386939f1ba24b8025c90f088ef5b0e869ecfd4f8[m
+Author: Terence Zhong <t.zhong16@gmail.com>
+Date:   Sat Aug 24 14:35:30 2019 +1200
+
+    add axios
+
+[33mcommit 3a946a1989bb8c29e7c8a4e7fc1ceb0bc24c0eda[m
+Merge: 4c4ad34 b98eb0c
+Author: mathematicode <joshohagan17@gmail.com>
+Date:   Sat Aug 24 14:06:14 2019 +1200
+
+    Merge pull request #1 from mathematicode/backend0
+    
+    Pulling changes from Backend0
+
+[33mcommit b98eb0c59e653e517022c56bca8c0c033d9df576[m
+Author: Terence Zhong <t.zhong16@gmail.com>
+Date:   Sat Aug 24 14:04:11 2019 +1200
+
+    setup back end
+
+[33mcommit eef72bb932a150df95f6265c8d40f7439ba7c39f[m
+Author: mathematicode <joshohagan17@gmail.com>
+Date:   Sat Aug 24 14:01:07 2019 +1200
+
+    Delete Testfile.txt
+
+[33mcommit 4c4ad3428a11cd3a06b319e94bc8f70e773a8c79[m
+Author: mathematicode <joshohagan17@gmail.com>
+Date:   Sat Aug 24 14:00:45 2019 +1200
+
+    Delete Testfile.txt
+
+[33mcommit ce221646da940105d1117c7be56dbf0187a1e787[m
+Author: Terence Zhong <t.zhong16@gmail.com>
+Date:   Sat Aug 24 12:27:29 2019 +1200
+
+    init node backend
+
+[33mcommit abb542ad70aa56e667f87b2874f6f1ecf54215bc[m
+Author: Josh O'Hagan <joshohagan17@outlook.co.nz>
+Date:   Sat Aug 24 12:13:37 2019 +1200
+
+    test commit
+
+[33mcommit 1a9fdac1ec7a7702565359ffaef604b7411ebca8[m
+Author: mathematicode <joshohagan17@gmail.com>
+Date:   Sat Aug 24 09:41:21 2019 +1200
+
+    Update README.md
+
+[33mcommit ea01070d5c7c0192f79a7c204b53750c8fd1493b[m
+Author: mathematicode <joshohagan17@gmail.com>
+Date:   Sat Aug 24 09:32:28 2019 +1200
+
+    Initial commit
