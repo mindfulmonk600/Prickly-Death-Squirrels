@@ -3,9 +3,17 @@ body {
     height: 100%;
 }
 
-.container {
+.search {
     height: 100%;
     display: flex-column;
     justify-content: center;
     align-items: center;
+}
+
+.row-searchbar {
+    display: block;
+}
+
+.row-logo{
+    display: block;
 }
