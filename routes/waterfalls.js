@@ -1,11 +1,18 @@
 const express = require('express');
 const router = express.Router();
 const geolib = require('geolib');
-const getWaterfalls = require('../Data/nz-waterfall-points-topo-150k.js');
+const { waterFalls } = require('../Data/nz-waterfall-points-topo-150k.js');
 
 router.get('/', (req, res) => {
-  console.log(getWaterfalls);
-  res.send(getWaterfalls);
+  const waterFallsProperties = waterFalls.map(wt => {
+    return {
+      Name: wt['properties']['Name'],
+      height: wt['properties']['height'],
+      coordinates: wt['geometry']['coordinates']
+    };
+  });
+
+  res.send(waterFallsProperties);
 
   // const fakeReq = {
   //   radius: 12000,

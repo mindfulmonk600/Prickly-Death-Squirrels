@@ -1,5 +1,4 @@
-module.exports.getWaterfalls =  function ()  {
-  return ( [
+ const waterFalls = [
       { "type": "Feature", "properties": { "Name": "Barrier Falls", "tessellate": "-1", "extrude": "0", "visibility": "-1", "macronated": "N", "height": "0", "t50_fid": "4911657", "name_ascii": "Barrier Falls" }, "geometry": { "type": "Point", "coordinates": [ 167.556318, -45.14273 ] } },
       { "type": "Feature", "properties": { "Name": "Marokopa Falls", "tessellate": "-1", "extrude": "0", "visibility": "-1", "macronated": "N", "height": "35", "t50_fid": "4912625", "name_ascii": "Marokopa Falls" }, "geometry": { "type": "Point", "coordinates": [ 174.851765, -38.261544 ] } },
       { "type": "Feature", "properties": { "Name": "McLean Falls", "tessellate": "-1", "extrude": "0", "visibility": "-1", "macronated": "N", "height": "0", "t50_fid": "6216857", "name_ascii": "McLean Falls" }, "geometry": { "type": "Point", "coordinates": [ 169.352763, -46.569476 ] } },
@@ -253,6 +252,7 @@ module.exports.getWaterfalls =  function ()  {
       { "type": "Feature", "properties": { "Name": "Āniwaniwa Falls", "tessellate": "-1", "extrude": "0", "visibility": "-1", "macronated": "Y", "height": "0", "t50_fid": "4912365", "name_ascii": "Aniwaniwa Falls" }, "geometry": { "type": "Point", "coordinates": [ 176.792068, -38.294564 ] } },
       { "type": "Feature", "properties": { "Name": "Wairēinga\/Bridal Veil Falls", "tessellate": "-1", "extrude": "0", "visibility": "-1", "macronated": "Y", "height": "0", "t50_fid": "4912645", "name_ascii": "Waireinga\/Bridal Veil Falls" }, "geometry": { "type": "Point", "coordinates": [ 174.896537, -37.908473 ] } }
       ]
- )
-} 
 
+      module.exports= {
+        waterFalls
+      }
