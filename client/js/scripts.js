@@ -1,4 +1,4 @@
-
+// Gets the user location
 var x = document.getElementById("getLocation");
 
 function getLocation() {
