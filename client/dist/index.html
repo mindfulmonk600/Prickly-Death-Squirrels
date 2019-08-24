@@ -13,8 +13,23 @@
 <body>
 
 
-  <div class="container">
+  <div class="search flex-column">
+    <div class="row-logo">
+    <!-- Placeholder logo ---->
     <img src="https://getbootstrap.com/docs/4.0/assets/brand/bootstrap-solid.svg" alt="" width="72" height="72">
+    </div>
+
+    <div class="row-searchbar">
+      <!--- Searchbar --->
+        <input type="text" class="form-control"  placeholder="Search" >
+        <span class="input-group-addon">
+                <button type="submit">
+                    <%= octicon "search" %>
+                </button>
+        </span>
+    </div>
+    </div>
+
   </div>
 
 </body>
