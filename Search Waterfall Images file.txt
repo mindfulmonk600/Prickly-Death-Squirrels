@@ -1,0 +1,12 @@
+CSE ID:  012192724314722472829:d4ruzb6dne4 
+API KEY: AIzaSyD5k1pb09Ps-HggBMol8C1DOdtXvKdBAdw 
+
+https://www.googleapis.com/customsearch/v1?key=YOUR_API_KEY&cx=YOUR_CSE_ID&q=flower&searchType=image&fileType=jpg&imgSize=small&alt=json
+
+Full link:
+
+https://www.googleapis.com/customsearch/v1?key=AIzaSyD5k1pb09Ps-HggBMol8C1DOdtXvKdBAdw&cx=012192724314722472829:d4ruzb6dne4&q=flower&searchType=image&fileType=jpg&imgSize=small&alt=json
+
+Part of the link:
+
+https://www.googleapis.com/customsearch/v1?key=AIzaSyD5k1pb09Ps-HggBMol8C1DOdtXvKdBAdw&cx=012192724314722472829:d4ruzb6dne4&q=NZ Huka Waterfall&searchType=image&alt=json
