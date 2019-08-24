@@ -15,5 +15,10 @@
   "bugs": {
     "url": "https://github.com/mathematicode/Prickly-Death-Squirrels/issues"
   },
-  "homepage": "https://github.com/mathematicode/Prickly-Death-Squirrels#readme"
+  "homepage": "https://github.com/mathematicode/Prickly-Death-Squirrels#readme",
+  "dependencies": {
+    "config": "^3.2.2",
+    "express": "^4.17.1",
+    "nodemon": "^1.19.1"
+  }
 }
