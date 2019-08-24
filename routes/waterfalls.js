@@ -4,6 +4,7 @@ const geolib = require('geolib');
 
 router.get("/", async (req, res) => {
   const fakeReq = {
+    liked: false,
     radius: 12000,
     userLocation: {
       latitude: 174.732678,
@@ -15,6 +16,7 @@ router.get("/", async (req, res) => {
     {
       name: "1",
       height: 10.0,
+      liked: false,
       location: {
         latitude: -41.294907,
         longitude: 174.775521
@@ -23,6 +25,7 @@ router.get("/", async (req, res) => {
     {
       name: "3",
       height: 10.0,
+      liked: true,
       location: {
         latitude: -41.294907,
         longitude: 174.775521
@@ -31,6 +34,7 @@ router.get("/", async (req, res) => {
     {
       name: "2",
       height: 10.0,
+      liked: true,
       location: {
         latitude: -41.294907,
         longitude: 174.775521
@@ -39,20 +43,49 @@ router.get("/", async (req, res) => {
   ];
 
   // logic 
-  const outputWaterfallList = []
+  const withinRadiusList = []
+  const likedWaterfalls = []
 
   for(let i=0; i<waterfallList.length; i++){
     const water = waterfallList[i];
     // Gets waterfall's distance
-    console.log("haven't got distance yet");
     let waterfallDistance = geolib.getDistance(fakeReq.userLocation, water.location, 1);
-    console.log(waterfallDistance);
     if (waterfallDistance < fakeReq.radius){
-      outputWaterfallList.push(water);
+      withinRadiusList.push(water);
     } 
+    if(water.liked){
+      likedWaterfalls.push(water);
+    }
   }
-  res.send(outputWaterfallList);
-  res.send("ERROR");
+
+// Attempting to search the link in google
+const waterfallName = "NZ Huka Waterfal";
+const startOfLink = "https://www.googleapis.com/customsearch/v1?key=AIzaSyD5k1pb09Ps-HggBMol8C1DOdtXvKdBAdw&cx=012192724314722472829:d4ruzb6dne4&q=";
+const endOfLink = "&searchType=image&alt=json";
+
+const link = startOfLink + waterfallList + endOfLink;
+
+const axios = require('axios');
+
+// Make a request for a user with a given ID
+axios.get(link)
+  .then(function (response) {
+    // handle success
+    const imageURL = response.data.items[0].link;
+    console.log(imageURL);
+  })
+  .catch(function (error) {
+    // handle error
+    console.log(error);
+  })
+  .finally(function () {
+    // always executed
+  });
+
+  // console.log("Waterfalls within radius:");
+  // console.log(withinRadiusList);
+  // console.log("Liked waterfalls:");
+  // console.log(likedWaterfalls);
 
 });
 
