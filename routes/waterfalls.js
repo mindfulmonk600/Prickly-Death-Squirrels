@@ -1,50 +1,65 @@
-const express = require("express");
+const express = require('express');
 const router = express.Router();
+const geolib = require('geolib');
+// const waterfall = require('../Data/nz-waterfall-points-topo-150k.geojson');
 
-router.get("/", async (req, res) => {
+router.get('/', async (req, res) => {
   const fakeReq = {
-    radius: 12,
-    geo: {
-      lat: -41.294907,
-      long: 174.775521
+    radius: 12000,
+    userLocation: {
+      latitude: 174.732678,
+      longitude: 174.775521
     }
   };
 
   const waterfallList = [
     {
-      name: "1",
+      name: '1',
       height: 10.0,
-      distance: 10,
-      lat: -41.294907,
-      long: 174.775521
+      location: {
+        latitude: -41.294907,
+        longitude: 174.775521
+      }
     },
     {
-      name: "3",
+      name: '3',
       height: 10.0,
-      distance: 10,
-      lat: -41.294907,
-      long: 174.775521
+      location: {
+        latitude: -41.294907,
+        longitude: 174.775521
+      }
     },
     {
-      name: "2",
+      name: '2',
       height: 10.0,
-      distance: 13,
-      lat: -41.294907,
-      long: 174.775521
+      location: {
+        latitude: -41.294907,
+        longitude: 174.775521
+      }
     }
   ];
 
-  // logic 
-  const outputWaterfallList = []
+  // logic
+  const outputWaterfallList = [];
 
-  for(let i=0; i<waterfallList.length; i++){
-    if (waterfallList[i].distance < fakeReq.radius){
-      outputWaterfallList.push(waterfallList[i]);
-    } 
+  for (let i = 0; i < waterfallList.length; i++) {
+    const water = waterfallList[i];
+    // Gets waterfall's distance
+    console.log("haven't got distance yet");
+    let waterfallDistance = geolib.getDistance(
+      fakeReq.userLocation,
+      water.location,
+      1
+    );
+    console.log(waterfallDistance);
+    if (waterfallDistance < fakeReq.radius) {
+      outputWaterfallList.push(water);
+    }
   }
   res.send(outputWaterfallList);
-  res.send("ERROR");
-
+  res.send('ERROR');
 });
+
+router.get('/', async (req, res) => {});
 
 module.exports = router;
