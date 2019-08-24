@@ -1,28 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
+<head>
+  <meta charset="UTF-8">
+  <title>Search for a user's location</title>
 
-    <title>Don't go chasing bad waterdalls</title>
-    <meta name="description" content="Finding Waterfalls near you" />
-    <meta name="author" content="SitePoint" />
+  <!-- Bootstrap core CSS -->
+  <link href="../../dist/css/bootstrap.min.css" rel="stylesheet">
 
-    <!-- <link rel="stylesheet" href="css/styles.css?v=1.0" /> -->
-  </head>
-  <body>
-    <h1>Hello World Front End 2</h1>
-    <p>mskdm</p>
-    <p>sds</p>
-    <p>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe perferendis
-      sit, temporibus ducimus debitis non corporis, mollitia adipisci nesciunt
-      numquam deserunt ea veritatis quis ut labore reiciendis eos animi facere.
-    </p>
-    <h3>test</h3>
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/_nrSxOilRIU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel tenetur autem minima rerum. Adipisci id totam, sunt ipsa sint tempora temporibus unde corporis distinctio ducimus est similique dignissimos obcaecati sapiente.</p>
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/G9DYR8Gx7jo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-      <!-- <script src="js/scripts.js"></script> -->
-    </p>
-  </body>
+</head>
+<body>
+<form class="search-user">
+  <div class="text-center mb-4">
+    <img class="mb-4" src="https://getbootstrap.com/docs/4.0/assets/brand/bootstrap-solid.svg" alt="" width="72" height="72">
+    <h1 class="h3 mb-3 font-weight-normal">Floating labels</h1>
+    <p>Build form controls with floating labels via the <code>:placeholder-shown</code> pseudo-element. <a href="https://caniuse.com/#feat=css-placeholder-shown">Works in latest Chrome, Safari, and Firefox.</a></p>
+  </div>
+
+  <div class="form-label-group">
+    <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
+    <label for="inputEmail">Email address</label>
+  </div>
+
+  <div class="form-label-group">
+    <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+    <label for="inputPassword">Password</label>
+  </div>
+
+  <div class="checkbox mb-3">
+    <label>
+      <input type="checkbox" value="remember-me"> Remember me
+    </label>
+  </div>
+  <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+  <p class="mt-5 mb-3 text-muted text-center">&copy; 2017-2018</p>
+</body>
 </html>
