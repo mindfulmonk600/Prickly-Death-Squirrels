@@ -1,0 +1,25 @@
+{
+  "name": "prickly-death-squirrels",
+  "version": "1.0.0",
+  "description": "Waterfall Project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mathematicode/Prickly-Death-Squirrels.git"
+  },
+  "author": "Team Prickly-death-squirrels",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mathematicode/Prickly-Death-Squirrels/issues"
+  },
+  "homepage": "https://github.com/mathematicode/Prickly-Death-Squirrels#readme",
+  "dependencies": {
+    "config": "^3.2.2",
+    "express": "^4.17.1",
+    "geolib": "^3.0.4",
+    "nodemon": "^1.19.1"
+  }
+}
