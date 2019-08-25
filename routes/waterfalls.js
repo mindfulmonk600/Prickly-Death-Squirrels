@@ -3,55 +3,14 @@ const router = express.Router();
 const geolib = require('geolib');
 const { waterFalls } = require('../Data/nz-waterfall-points-topo-150k.js');
 
-router.get("/", async (req, res) => {
-  const fakeReq = {
-    liked: false,
-    radius: 12000,
-    userLocation: {
-      latitude: 174.732678,
-      longitude: 174.775521
-    }
-  };
-
-  // logic 
-  const withinRadiusList = []
-  const likedWaterfalls = []
-
-  for(let i=0; i<waterfallList.length; i++){
-    const water = waterfallList[i];
-    // Gets waterfall's distance
-    let waterfallDistance = geolib.getDistance(fakeReq.userLocation, water.location, 1);
-    if (waterfallDistance < fakeReq.radius){
-      withinRadiusList.push(water);
-    } 
-    if(water.liked){
-      likedWaterfalls.push(water);
-    }
-  }
-
 // Attempting to search the link in google
 const waterfallName = "NZ Huka Waterfal";
 const startOfLink = "https://www.googleapis.com/customsearch/v1?key=AIzaSyD5k1pb09Ps-HggBMol8C1DOdtXvKdBAdw&cx=012192724314722472829:d4ruzb6dne4&q=";
 const endOfLink = "&searchType=image&alt=json";
 
-const link = startOfLink + waterfallList + endOfLink;
+const link = startOfLink + waterfallName + endOfLink;
 
 const axios = require('axios');
-
-// Make a request for a user with a given ID
-axios.get(link)
-  .then(function (response) {
-    // handle success
-    const imageURL = response.data.items[0].link;
-    console.log(imageURL);
-  })
-  .catch(function (error) {
-    // handle error
-    console.log(error);
-  })
-  .finally(function () {
-    // always executed
-  });
 
 router.get('/', (req, res) => {
   const waterFallsProperties = waterFalls.map(wt => {
@@ -62,27 +21,33 @@ router.get('/', (req, res) => {
     };
   });
 
-  res.send(waterFallsProperties);
+  // logic
+  const outputWaterfallList = [];
 
-  // // logic
-  // const outputWaterfallList = [];
+  for (let i = 0; i < waterFallsProperties.length; i++) {
+    const water = waterFallsProperties[i];
+    // Gets waterfall's distance
+    const latitude = water.coordinates[1];
+    const longitude = water.coordinates[0];
+    const waterfallLocCoord = {latitude: latitude, longitude: longitude};
+    //TEST variables
+    const radius = req.query.radius;
+    const userLocTest = {latitude: req.query.latt, longitude: req.query.long}
 
-  // for (let i = 0; i < waterfallList.length; i++) {
-  //   const water = waterfallList[i];
-  //   // Gets waterfall's distance
-  //   console.log("haven't got distance yet");
-  //   let waterfallDistance = geolib.getDistance(
-  //     fakeReq.userLocation,
-  //     water.location,
-  //     1
-  //   );
-  //   console.log(waterfallDistance);
-  //   if (waterfallDistance < fakeReq.radius) {
-  //     outputWaterfallList.push(water);
-  //   }
-  // }
-  // res.send(outputWaterfallList);
-  // res.send('ERROR');
+    let waterfallDistance = geolib.getDistance(
+      userLocTest,
+      waterfallLocCoord,
+      1
+    );
+    
+    if (waterfallDistance < radius) {
+      console.log(waterfallDistance);
+      water.distance = waterfallDistance;
+      outputWaterfallList.push(water);
+    }
+  }
+  res.send(outputWaterfallList);
+
 });
 
 module.exports = router;

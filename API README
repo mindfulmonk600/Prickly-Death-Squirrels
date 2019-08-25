@@ -6,5 +6,6 @@ Font-end passes in parameters:
   -Array of waterfalls in radius. Each waterfall has:
     -name
     -location
+    -distance from user
     -imageURL
     -height
