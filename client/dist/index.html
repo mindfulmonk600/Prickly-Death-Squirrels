@@ -1,28 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="Search for current or preferred location to use with Chasing Waterfalls">
+  <meta name="author" content="Prickly Death Squirrels">
 
-    <title>Don't go chasing bad waterdalls</title>
-    <meta name="description" content="Finding Waterfalls near you" />
-    <meta name="author" content="SitePoint" />
+  <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
 
-    <!-- <link rel="stylesheet" href="css/styles.css?v=1.0" /> -->
-  </head>
-  <body>
-    <h1>Hello World Front End 2</h1>
-    <p>mskdm</p>
-    <p>sds</p>
-    <p>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe perferendis
-      sit, temporibus ducimus debitis non corporis, mollitia adipisci nesciunt
-      numquam deserunt ea veritatis quis ut labore reiciendis eos animi facere.
-    </p>
-    <h3>test</h3>
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/_nrSxOilRIU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel tenetur autem minima rerum. Adipisci id totam, sunt ipsa sint tempora temporibus unde corporis distinctio ducimus est similique dignissimos obcaecati sapiente.</p>
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/G9DYR8Gx7jo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-      <!-- <script src="js/scripts.js"></script> -->
-    </p>
-  </body>
+
+  <div class="search flex-column">
+    <div class="row-logo">
+    <!-- Placeholder logo ---->
+    <img src="https://getbootstrap.com/docs/4.0/assets/brand/bootstrap-solid.svg" alt="" width="72" height="72">
+    </div>
+
+    <div class="row-searchbar">
+      <div class="input-group mb-3">
+        <!--- Searchbar --->
+        <input type="text" class="form-control" type="text" id="searchTextField" placeholder="Search Box">
+        <div class="input-group-append">
+          <button id= "searchbutton" class="btn btn-outline-secondary" type="button">Search</button>
+        </div>
+      </div>
+    </div>
+
+    </div>
+
+  </div>
+
+
+  <script async defer
+          src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD5k1pb09Ps-HggBMol8C1DOdtXvKdBAdw&callback=initMap">
+  </script>
+  <script src="js/scripts.js"></script>
+</body>
 </html>
+
+
+
