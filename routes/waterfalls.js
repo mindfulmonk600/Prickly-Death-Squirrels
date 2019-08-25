@@ -27,28 +27,26 @@ router.get('/', (req, res) => {
   for (let i = 0; i < waterFallsProperties.length; i++) {
     const water = waterFallsProperties[i];
     // Gets waterfall's distance
-    console.log("haven't got distance yet");
-    const latitude = water.coordinates[0];
-    const longitude = water.coordinates[1];
+    const latitude = water.coordinates[1];
+    const longitude = water.coordinates[0];
     const waterfallLocCoord = {latitude: latitude, longitude: longitude};
-    console.log(waterfallLocCoord);
     //TEST variables
-    const testRadius = 10;
-    const userLocTest = {latitude: latitude, longitude: longitude}
+    const testRadius = 500000;
+    const userLocTest = {latitude: -41.292653, longitude: 174.777058}
+
     let waterfallDistance = geolib.getDistance(
       userLocTest,
       waterfallLocCoord,
       1
     );
-    console.log(waterfallDistance);
+    
     if (waterfallDistance < testRadius) {
+      console.log(waterfallDistance);
       outputWaterfallList.push(water);
     }
   }
   res.send(outputWaterfallList);
-  res.send('ERROR');
 
-  // res.send(waterFallsProperties);
 });
 
 module.exports = router;
