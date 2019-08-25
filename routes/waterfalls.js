@@ -12,21 +12,6 @@ const link = startOfLink + waterfallName + endOfLink;
 
 const axios = require('axios');
 
-// Make a request for a user with a given ID
-axios.get(link)
-  .then(function (response) {
-    // handle success
-    // const imageURL = response.data.items[0].link;
-    // console.log(imageURL);
-  })
-  .catch(function (error) {
-    // handle error
-    console.log(error);
-  })
-  .finally(function () {
-    // always executed
-  });
-
 router.get('/', (req, res) => {
   const waterFallsProperties = waterFalls.map(wt => {
     return {
