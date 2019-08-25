@@ -31,8 +31,8 @@ router.get('/', (req, res) => {
     const longitude = water.coordinates[0];
     const waterfallLocCoord = {latitude: latitude, longitude: longitude};
     //TEST variables
-    const testRadius = 500000;
-    const userLocTest = {latitude: -41.292653, longitude: 174.777058}
+    const radius = req.query.radius;
+    const userLocTest = {latitude: req.query.latt, longitude: req.query.long}
 
     let waterfallDistance = geolib.getDistance(
       userLocTest,
@@ -40,7 +40,7 @@ router.get('/', (req, res) => {
       1
     );
     
-    if (waterfallDistance < testRadius) {
+    if (waterfallDistance < radius) {
       console.log(waterfallDistance);
       outputWaterfallList.push(water);
     }
