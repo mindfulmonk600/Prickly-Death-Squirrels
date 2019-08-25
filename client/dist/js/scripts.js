@@ -30,3 +30,10 @@ function showError(error) {
       break;
   }
 }
+
+$(document).ready(function() {
+//  $(".locationbtn").click(function(){
+//    alert("pressed button");
+//    document.location='/index.html';
+//  })
+}
