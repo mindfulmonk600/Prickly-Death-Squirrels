@@ -4,38 +4,9 @@ const geolib = require('geolib');
 const axios = require('axios');
 const { waterFalls } = require('../Data/nz-waterfall-points-topo-150k.js');
 
-// const fakeReq = {
-//   liked: false,
-//   radius: 12000,
-//   userLocation: {
-//     latitude: 174.732678,
-//     longitude: 174.775521
-//   }
-// };
 
-// // logic
-// const withinRadiusList = []
-// const likedWaterfalls = []
 
-// for(let i=0; i<waterfallList.length; i++){
-//   const water = waterfallList[i];
-//   // Gets waterfall's distance
-//   let waterfallDistance = geolib.getDistance(fakeReq.userLocation, water.location, 1);
-//   if (waterfallDistance < fakeReq.radius){
-//     withinRadiusList.push(water);
-//   }
-//   if(water.liked){
-//     likedWaterfalls.push(water);
-//   }
-// }
-
-// Attempting to search the link in google
-
-const startOfLink =
-  'https://www.googleapis.com/customsearch/v1?key=AIzaSyD5k1pb09Ps-HggBMol8C1DOdtXvKdBAdw&cx=012192724314722472829:d4ruzb6dne4&q=';
-const endOfLink = '&searchType=image&alt=json';
-
-router.get('/', async (req, res) => {
+router.get('/', (req, res) => {
   const waterFallsProperties = waterFalls.map(wt => {
     return {
       Name: wt['properties']['Name'],
@@ -46,28 +17,36 @@ router.get('/', async (req, res) => {
       }`
     };
   });
-  // Make a request for a user with a given ID
-  link = startOfLink + 'Barrier Falls' + endOfLink;
 
-  const links = waterFalls.map(async wt => {
-    const img = await axios
-      .get(link)
-      .then(function(response) {
-        // handle success
-        const imageURL = response.data.items[0].link;
-        console.log(imageURL);
-        return imageURL;
-      })
-      .catch(function(error) {
-        // handle error
-        console.log(error);
-      });
 
-    return img;
-  });
-  // console.log(links);
 
-  res.send(waterFallsProperties);
+  // logic
+  const outputWaterfallList = [];
+
+  for (let i = 0; i < waterFallsProperties.length; i++) {
+    const water = waterFallsProperties[i];
+    // Gets waterfall's distance
+    const latitude = water.coordinates[1];
+    const longitude = water.coordinates[0];
+    const waterfallLocCoord = {latitude: latitude, longitude: longitude};
+    //TEST variables
+    const testRadius = 500000;
+    const userLocTest = {latitude: -41.292653, longitude: 174.777058}
+
+    let waterfallDistance = geolib.getDistance(
+      userLocTest,
+      waterfallLocCoord,
+      1
+    );
+    
+    if (waterfallDistance < testRadius) {
+      console.log(waterfallDistance);
+      outputWaterfallList.push(water);
+    }
+  }
+  res.send(outputWaterfallList);
+
+
 });
 
 module.exports = router;
