@@ -51,7 +51,7 @@ function showPosition(position) {
 }
 
 function showError(error) {
-  switch(error.code) {
+  switch (error.code) {
     case error.PERMISSION_DENIED:
       currentLocation.innerHTML = "User denied the request for Geolocation."
       break;
@@ -66,4 +66,3 @@ function showError(error) {
       break;
   }
 }
-
