@@ -1,5 +1,7 @@
 var latt;
 var long;
+var waterfallDetails;
+var n = 0;
 
 //get coordinates from the url
 function getCoords() {
@@ -21,18 +23,26 @@ function getNearbyWaterfalls(lattitude, longitude) {
 }
 
 
-function populateWaterfallDetails(waterfallDetails) {
+function populateWaterfallDetails(waterfallInfo) {
     var waterfallName = document.getElementById("waterfallName");
     var waterfallDistance = document.getElementById("waterfallDistance");
-    var waterfallHeight = document.getElementById("waterfallHeight")
+    var waterfallHeight = document.getElementById("waterfallHeight");
+    var waterfallImage = document.getElementById("waterfallImage");
 
-    waterfallName.innerHTML = waterfallDetails[0].Name;
-    waterfallDistance.innerText = waterfallDetails[0].distance/1000;
-    waterfallHeight.innerText = waterfallDetails[0].height;
+    waterfallName.innerHTML = waterfallInfo.Name;
+    waterfallDistance.innerText = waterfallInfo.distance/1000;
+    waterfallHeight.innerText = waterfallInfo.height;
+    waterfallImage.src = waterfallInfo.link;
 
 }
 
+var likeWaterfall = document.getElementById("likeWaterfall");
+likeWaterfall.addEventListener("click", function () {
+    populateWaterfallDetails(waterfallDetails[n++])
+})
+
 getCoords();
 getNearbyWaterfalls(latt, long).then(function (response) {
-    populateWaterfallDetails(response);
+    waterfallDetails = response;
+    populateWaterfallDetails(response[0]);
 });
