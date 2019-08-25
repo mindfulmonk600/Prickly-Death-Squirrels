@@ -20,14 +20,26 @@
     </div>
 
     <div class="row-searchbar">
-      <!--- Searchbar --->
-      <input type="search" class="form-control" id="search-input" placeholder="Search..." aria-label="Search for..." autocomplete="off">
-
+      <div class="input-group mb-3">
+        <!--- Searchbar --->
+        <input type="text" class="form-control" type="text" id="searchTextField" placeholder="Search Box">
+        <div class="input-group-append">
+          <button id= "searchbutton" class="btn btn-outline-secondary" type="button">Search</button>
+        </div>
+      </div>
     </div>
 
     </div>
 
   </div>
 
+
+  <script async defer
+          src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD5k1pb09Ps-HggBMol8C1DOdtXvKdBAdw&callback=initMap">
+  </script>
+  <script src="js/scripts.js"></script>
 </body>
 </html>
+
+
+
