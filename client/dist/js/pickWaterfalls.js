@@ -10,8 +10,8 @@ function getCoords() {
 
 
 //get waterfalls from api
-function getNearbyWaterfalls(latt, long) {
-    var url = "api/waterfalls/?latt=" + latt + "&long=" + long;
+function getNearbyWaterfalls(lattitude, longitude) {
+    var url = "http://localhost:5000/api/waterfalls/?latt=" + lattitude + "&long=" + longitude ;
     fetch(url).then(function (response) {
         return response.json();
     }).then(function (waterfallJSON) {
@@ -21,3 +21,4 @@ function getNearbyWaterfalls(latt, long) {
 
 
 getCoords();
+getNearbyWaterfalls(latt, long);
