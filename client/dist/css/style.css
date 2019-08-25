@@ -7,7 +7,7 @@ body {
 
 .search {
     height: 100%;
-    display: flex-column;
+    display: flex;
     justify-content: center;
     align-items: center;
 }
