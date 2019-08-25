@@ -1,5 +1,3 @@
-
-
 // Gets the user location
 var currentLocation = document.getElementById("currentLocation");
 currentLocation.addEventListener("click", getLocation)
@@ -27,6 +25,7 @@ function translateLocation() {
   window.location="/pickWaterfalls.html?latt=" + latt + "&long=" + long;
 }
 
+//get waterfalls from api
 function getNearbyWaterfalls(latt, long) {
     var url = "api/waterfalls/?latt=" + latt + "&long=" + long;
     fetch(url).then(function (response) {
@@ -36,7 +35,7 @@ function getNearbyWaterfalls(latt, long) {
     })
 }
 
-//get user's location logic
+//get user's location via browser
 function getLocation() {
   if (navigator.geolocation) {
     navigator.geolocation.getCurrentPosition(showPosition, showError);
