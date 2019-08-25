@@ -1,25 +1,24 @@
 const express = require('express');
 const router = express.Router();
 const geolib = require('geolib');
+const axios = require('axios');
 const { waterFalls } = require('../Data/nz-waterfall-points-topo-150k.js');
 
-// Attempting to search the link in google
-const waterfallName = "NZ Huka Waterfal";
-const startOfLink = "https://www.googleapis.com/customsearch/v1?key=AIzaSyD5k1pb09Ps-HggBMol8C1DOdtXvKdBAdw&cx=012192724314722472829:d4ruzb6dne4&q=";
-const endOfLink = "&searchType=image&alt=json";
 
-const link = startOfLink + waterfallName + endOfLink;
-
-const axios = require('axios');
 
 router.get('/', (req, res) => {
   const waterFallsProperties = waterFalls.map(wt => {
     return {
       Name: wt['properties']['Name'],
       height: wt['properties']['height'],
-      coordinates: wt['geometry']['coordinates']
+      coordinates: wt['geometry']['coordinates'],
+      link: `https://source.unsplash.com/collection/404407/1600x900?r=${
+        wt['properties']['Name']
+      }`
     };
   });
+
+
 
   // logic
   const outputWaterfallList = [];
@@ -47,6 +46,7 @@ router.get('/', (req, res) => {
     }
   }
   res.send(outputWaterfallList);
+
 
 });
 
