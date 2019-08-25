@@ -1,7 +1,7 @@
 var latt;
 var long;
 var waterfallDetails;
-var n = 0;
+var n = 1;
 
 //get coordinates from the url
 function getCoords() {

@@ -21,7 +21,7 @@ h1 {
   margin-bottom: 5%;
 }
 
-ul.messages {
+ul {
   list-style-type: none;
 }
 
@@ -39,7 +39,8 @@ ul.messages {
 
 .row-logo{
     display: block;
-    padding-bottom: 10%;
+    justify-content: center;
+    padding-top: 7%;
 }
 
 .btn {
@@ -48,4 +49,25 @@ ul.messages {
 
 .bottombtns {
   margin-top: 10%;
+}
+
+.bottomImg {
+  position: absolute;
+  bottom: -50px;
+}
+
+.containerbg {
+  background: url("../images/illustration.png") no-repeat fixed bottom;
+  background-size: contain;
+  background-color: white;
+  height: 100vh;
+  color: black;
+}
+
+.containerbg .btn {
+  color: black;
+}
+
+.search.flex-column {
+    justify-content: flex-start;
 }
