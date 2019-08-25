@@ -12,13 +12,27 @@ function getCoords() {
 //get waterfalls from api
 function getNearbyWaterfalls(lattitude, longitude) {
     var url = "http://localhost:5000/api/waterfalls/?latt=" + lattitude + "&long=" + longitude + "&radius=" + 500000;
-    fetch(url).then(function (response) {
+    return fetch(url).then(function (response) {
         return response.json();
     }).then(function (waterfallJSON) {
         console.log(JSON.stringify(waterfallJSON));
+        return waterfallJSON;
     })
 }
 
 
+function populateWaterfallDetails(waterfallDetails) {
+    var waterfallName = document.getElementById("waterfallName");
+    var waterfallDistance = document.getElementById("waterfallDistance");
+    var waterfallHeight = document.getElementById("waterfallHeight")
+
+    waterfallName.innerHTML = waterfallDetails[0].Name;
+    waterfallDistance.innerText = waterfallDetails[0].distance/1000;
+    waterfallHeight.innerText = waterfallDetails[0].height;
+
+}
+
 getCoords();
-getNearbyWaterfalls(latt, long);
+getNearbyWaterfalls(latt, long).then(function (response) {
+    populateWaterfallDetails(response);
+});

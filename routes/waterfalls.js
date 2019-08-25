@@ -42,6 +42,7 @@ router.get('/', (req, res) => {
     
     if (waterfallDistance < radius) {
       console.log(waterfallDistance);
+      water.distance = waterfallDistance;
       outputWaterfallList.push(water);
     }
   }
