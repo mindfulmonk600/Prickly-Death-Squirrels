@@ -253,6 +253,6 @@
       { "type": "Feature", "properties": { "Name": "Wairēinga\/Bridal Veil Falls", "tessellate": "-1", "extrude": "0", "visibility": "-1", "macronated": "Y", "height": "0", "t50_fid": "4912645", "name_ascii": "Waireinga\/Bridal Veil Falls" }, "geometry": { "type": "Point", "coordinates": [ 174.896537, -37.908473 ] } }
       ]
 
-      module.exports= {
-        waterFalls
-      }
+module.exports= {
+  waterFalls
+}

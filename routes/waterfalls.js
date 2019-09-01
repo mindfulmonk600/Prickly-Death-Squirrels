@@ -15,10 +15,8 @@ router.get('/', (req, res) => {
       }`
     };
   });
-
   // logic
   const outputWaterfallList = [];
-
   for (let i = 0; i < waterFallsProperties.length; i++) {
     const water = waterFallsProperties[i];
     // Gets waterfall's distance
@@ -28,13 +26,11 @@ router.get('/', (req, res) => {
     //TEST variables
     const testRadius = 500000;
     const userLocTest = { latitude: -41.292653, longitude: 174.777058 };
-
     let waterfallDistance = geolib.getDistance(
       userLocTest,
       waterfallLocCoord,
       1
     );
-
     if (waterfallDistance < testRadius) {
       console.log(waterfallDistance);
       outputWaterfallList.push(water);
